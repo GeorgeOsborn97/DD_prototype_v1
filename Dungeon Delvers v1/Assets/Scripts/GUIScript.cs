@@ -25,12 +25,16 @@ public class GUIScript : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 
+    public void closeBtn()
+    {
+        _flag.SetActive(false);
+    }
+
     IEnumerator ScaleDown()
     {
-        
-        yield return new WaitForSeconds(2.0f);
-        _guildHall.transform.transform.localScale = _iconScale;
         _flag.SetActive(true);
+        yield return new WaitForSeconds(0.5f);
+        _guildHall.transform.transform.localScale = _iconScale;
         
     }
 
