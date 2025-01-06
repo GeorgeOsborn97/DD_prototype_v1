@@ -11,6 +11,9 @@ public class GUIScript : MonoBehaviour
     public GameObject _guildHall;
     public GameObject _flag;
     public Vector3 _iconScale = new Vector3(1, 3, 1);
+    public GameObject _eventManager;
+    EventScipt _eventScript;
+
 
 
     public void guildHallClick()
@@ -28,6 +31,13 @@ public class GUIScript : MonoBehaviour
     public void closeBtn()
     {
         _flag.SetActive(false);
+    }
+
+    public void StartTime()
+    {
+        Debug.Log("hello again");
+        _eventScript = _eventManager.GetComponent<EventScipt>();
+        _eventScript._isCountingDown = true;
     }
 
     IEnumerator ScaleDown()
