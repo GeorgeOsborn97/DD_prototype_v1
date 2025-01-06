@@ -16,11 +16,22 @@ public class EventScipt : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (_isCountingDown)
+       CountDown();
+    }
+
+    public void CountDown()
+    {
+        if (_isCountingDown is true)
         {
-            Debug.Log("hello");
+            StartCoroutine(TakeOneAway());
         }
     }
 
-
+    IEnumerator TakeOneAway()
+    {
+        var rnd = new System.Random();
+ 
+        Doomsday.gameObject.transform.GetChild(1).GetComponent<TextEditor>().text = rnd.ToString();
+        yield return new WaitForSeconds(3.0f);
+    }
 }

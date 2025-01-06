@@ -22,7 +22,8 @@ public class GUIScript : MonoBehaviour
         _guildHall.transform.localScale = new Vector3(1.2f, 3.6f, 1.0f);
         StartCoroutine(ScaleDown());
     }
-    
+
+
     public void flagBtnClick()
     {
         SceneManager.LoadScene(1);
