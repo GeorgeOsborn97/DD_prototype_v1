@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Unity.UI;
 using Unity.VisualScripting;
+using UnityEngine.SceneManagement;
 
 public class GUIScript : MonoBehaviour
 {
@@ -31,6 +32,8 @@ public class GUIScript : MonoBehaviour
         
         yield return new WaitForSeconds(2.0f);
         _guildHall.transform.transform.localScale = _iconScale;
+        SceneManager.LoadScene(1);
+        
     }
 
 }
