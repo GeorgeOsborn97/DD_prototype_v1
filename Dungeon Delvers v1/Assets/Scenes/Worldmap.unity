@@ -635,7 +635,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6347487056777205638, guid: 2d70e9f5c12767f4794a310da1b4fcc6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: flagBtnClick
+      value: ToGuildClick
       objectReference: {fileID: 0}
     - target: {fileID: 6347487056777205638, guid: 2d70e9f5c12767f4794a310da1b4fcc6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -1000,6 +1000,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _guildHall: {fileID: 1891331960}
+  _map: {fileID: 0}
   _flag: {fileID: 414881672}
   _iconScale: {x: 1, y: 3, z: 1}
   _eventManager: {fileID: 2090405687}
