@@ -15,4 +15,10 @@ public class ButtonScript : MonoBehaviour
     {
         
     }
+
+    private void OnTriggerEnter()
+    {
+        transform.localScale = Vector3.one;
+        Debug.Log("entered");
+    }
 }

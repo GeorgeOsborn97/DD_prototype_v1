@@ -1,12 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
+using System;
+using System.Runtime.CompilerServices;
 
 public class EventScipt : MonoBehaviour
 {
-
     public bool _isCountingDown = false;
-    public GameObject Doomsday;
+    public GameObject _doomsday;
+
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -30,8 +35,10 @@ public class EventScipt : MonoBehaviour
     IEnumerator TakeOneAway()
     {
         var rnd = new System.Random();
- 
-        Doomsday.gameObject.transform.GetChild(1).GetComponent<TextEditor>().text = rnd.ToString();
+        var _num = rnd.Next(1, 10);
+
+        Debug.Log("number is " + _num);
+        _doomsday.transform.GetComponent<TextMesh>().text = _num.ToString();
         yield return new WaitForSeconds(3.0f);
     }
 }
